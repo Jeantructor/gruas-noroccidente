@@ -1,114 +1,109 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Grúas Noroccidente | Servicio de grúa 24 horas</title>
+<title>Grúas Noroccidente | Grúas 24/7 San Miguel de los Bancos</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 background:#f4f4f4;
+color:#333;
 }
 
-/* HERO */
+header{
+background:#111;
+color:white;
+padding:15px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+}
 
 .hero{
-background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url("https://images.unsplash.com/photo-1563720223185-11003d516935");
+background:url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80");
 background-size:cover;
 background-position:center;
-color:white;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-padding:140px 20px;
+color:white;
+}
+
+.hero-box{
+background:rgba(0,0,0,0.6);
+padding:50px;
+border-radius:10px;
+max-width:700px;
 }
 
 .hero h1{
 font-size:50px;
-color:#FFD700;
-margin:0;
+margin-bottom:10px;
 }
 
 .hero p{
 font-size:22px;
+margin-bottom:30px;
 }
 
-.boton{
-display:inline-block;
-margin-top:30px;
-padding:18px 35px;
-background:#ff0000;
+.btn-call{
+background:#ff3c00;
 color:white;
+padding:18px 35px;
+font-size:20px;
+border-radius:8px;
 text-decoration:none;
-font-size:22px;
-border-radius:10px;
 font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* SERVICIOS */
+.btn-call:hover{
+background:#ff1f00;
+}
 
-.servicios{
+.section{
 padding:60px 20px;
 text-align:center;
+background:white;
 }
 
-.servicios h2{
-color:#d60000;
-margin-bottom:40px;
+.section-gray{
+background:#f0f0f0;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-max-width:900px;
-margin:auto;
+.section h2{
+font-size:32px;
+margin-bottom:20px;
 }
 
-.card{
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:30px;
+}
+
+.service{
 background:white;
 padding:25px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-font-size:18px;
-transition:0.3s;
+border-radius:10px;
+width:250px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.card:hover{
-transform:translateY(-6px);
+.map{
+max-width:900px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
 }
-
-/* CONFIANZA */
-
-.confianza{
-background:#FFD700;
-padding:50px 20px;
-text-align:center;
-font-size:18px;
-}
-
-/* MAPA */
-
-.mapa{
-padding:50px 20px;
-text-align:center;
-}
-
-/* CONTACTO */
-
-.contacto{
-background:#111;
-color:white;
-text-align:center;
-padding:40px;
-}
-
-/* BOTONES FLOTANTES */
 
 .whatsapp{
 position:fixed;
@@ -116,58 +111,19 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:16px 22px;
+padding:15px 20px;
 border-radius:50px;
 font-size:18px;
 text-decoration:none;
-box-shadow:0 5px 12px rgba(0,0,0,0.4);
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
-.llamar{
-position:fixed;
-bottom:80px;
-right:20px;
-background:#ff0000;
+footer{
+background:#111;
 color:white;
-padding:16px 22px;
-border-radius:50px;
-font-size:18px;
-text-decoration:none;
-box-shadow:0 5px 12px rgba(0,0,0,0.4);
-animation:parpadeo 1s infinite;
-}
-
-@keyframes parpadeo{
-0%{opacity:1;}
-50%{opacity:0.6;}
-100%{opacity:1;}
-}
-
-/* CELULAR */
-
-@media(max-width:768px){
-
-.hero{
-padding:100px 20px;
-}
-
-.hero h1{
-font-size:36px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.boton{
-font-size:18px;
-padding:14px 25px;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
+text-align:center;
+padding:20px;
+margin-top:40px;
 }
 
 </style>
@@ -175,78 +131,110 @@ grid-template-columns:1fr;
 
 <body>
 
+<header>
+GRÚAS NOROCCIDENTE 🚛
+</header>
+
 <section class="hero">
 
-<h1>🚛 Grúas Noroccidente</h1>
+<div class="hero-box">
 
-<p>Servicio de grúa 24 horas</p>
-<p>Noroccidente de Pichincha</p>
+<h1>GRÚAS 24/7</h1>
 
-<a class="boton" href="tel:+593XXXXXXXXX">
-🚨 LLAMAR GRÚA AHORA
+<p>
+Servicio de grúas en San Miguel de los Bancos  
+y Noroccidente de Pichincha
+</p>
+
+<a class="btn-call" href="tel:+593999999999">
+📞 LLAMAR GRÚA AHORA
 </a>
-
-</section>
-
-<section class="servicios">
-
-<h2>Nuestros Servicios</h2>
-
-<div class="grid">
-
-<div class="card">🚛 Traslado de vehículos</div>
-<div class="card">🔧 Auxilio mecánico</div>
-<div class="card">🛻 Transporte de autos</div>
-<div class="card">🕒 Atención 24 horas</div>
 
 </div>
 
 </section>
 
-<section class="confianza">
 
-<h2>⭐ ¿Por qué elegirnos?</h2>
+<section class="section">
 
-<p>🚛 Servicio rápido y seguro</p>
-<p>📍 Cobertura Noroccidente de Pichincha</p>
-<p>🕒 Atención 24 horas</p>
-<p>🔧 Auxilio mecánico inmediato</p>
+<h2>Nuestros Servicios</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>🚗 Traslado de Vehículos</h3>
+<p>Movemos tu vehículo de forma segura a cualquier destino.</p>
+</div>
+
+<div class="service">
+<h3>🚨 Emergencias 24/7</h3>
+<p>Disponible las 24 horas del día todos los días.</p>
+</div>
+
+<div class="service">
+<h3>🛣 Asistencia en Carretera</h3>
+<p>Te ayudamos en caso de accidentes o fallas mecánicas.</p>
+</div>
+
+</div>
 
 </section>
 
-<section class="mapa">
 
-<h2>📍 Nuestra ubicación</h2>
+<section class="section section-gray">
+
+<h2>Servicio Rápido y Confiable</h2>
+
+<p style="max-width:800px;margin:auto;font-size:18px;">
+Atendemos en San Miguel de los Bancos, Pedro Vicente Maldonado,
+Puerto Quito y todo el Noroccidente de Pichincha.
+Llegamos rápido y con servicio profesional.
+</p>
+
+</section>
+
+
+<section class="section" id="contacto">
+
+<h2>Ubicación</h2>
+
+<p>San Miguel de los Bancos - Ecuador</p>
+
+<div class="map">
 
 <iframe
-src="https://maps.google.com/maps?q=San%20Antonio%20de%20Pichincha&t=&z=13&ie=UTF8&iwloc=&output=embed"
+src="https://www.google.com/maps?q=San+Miguel+de+los+Bancos+Ecuador&output=embed"
 width="100%"
-height="350"
-style="border:0;">
+height="400"
+style="border:0"
+allowfullscreen=""
+loading="lazy">
 </iframe>
 
-</section>
+</div>
 
-<section class="contacto">
+<br>
 
-<h2>📞 Contacto</h2>
-
-<p>Teléfono: 099XXXXXXX</p>
-
-<p>Servicio de grúa 24 horas</p>
-
-<p>Noroccidente de Pichincha</p>
-
-</section>
-
-<a class="llamar" href="tel:+593XXXXXXXXX">
-🚨 Emergencia
+<a class="btn-call" href="tel:+593999999999">
+📞 LLAMAR GRÚA
 </a>
 
-<a class="whatsapp" href="https://wa.me/593XXXXXXXXX">
+</section>
+
+
+<footer>
+
+<p>Grúas Noroccidente | Servicio 24/7</p>
+
+<p>WhatsApp: +593999999999</p>
+
+</footer>
+
+
+<a class="whatsapp" href="https://wa.me/593999999999">
 💬 WhatsApp
 </a>
 
+
 </body>
 </html>
-
