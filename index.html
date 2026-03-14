@@ -6,9 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Grúas Noroccidente 24/7 | Noroccidente de Pichincha</title>
-
-<meta name="description" content="Servicio de grúas 24 horas en San Miguel de los Bancos, Mindo, Nanegalito, Pedro Vicente Maldonado y todo el Noroccidente de Pichincha.">
+<title>Grúas 24/7 | Traslado y Asistencia Vehicular</title>
 
 <style>
 
@@ -29,8 +27,8 @@ font-weight:bold;
 }
 
 .hero{
-background:url("https://images.unsplash.com/photo-1591768793355-74d04bb6608f") center/cover no-repeat;
 height:420px;
+background:url("https://images.unsplash.com/photo-1591768793355-74d04bb6608f") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -38,134 +36,87 @@ text-align:center;
 color:white;
 }
 
-.hero h1{
-background:rgba(0,0,0,0.65);
-padding:25px;
+.hero-box{
+background:rgba(0,0,0,0.55);
+padding:35px;
 border-radius:10px;
-font-size:34px;
+max-width:600px;
 }
 
-.container{
-max-width:1100px;
+.hero h1{
+font-size:38px;
+margin:0;
+}
+
+.hero p{
+font-size:18px;
+margin-top:10px;
+}
+
+.botones{
+margin-top:20px;
+}
+
+.boton{
+display:inline-block;
+padding:14px 24px;
+margin:8px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.llamar{
+background:#444;
+color:white;
+}
+
+section{
+padding:40px 20px;
+max-width:1000px;
 margin:auto;
-padding:30px;
 }
 
-h2{
+.titulo{
 text-align:center;
-margin-bottom:20px;
+margin-bottom:30px;
 }
 
 .servicios{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
-margin-top:30px;
 }
 
 .card{
 background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 5px 12px rgba(0,0,0,0.15);
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
 text-align:center;
-font-weight:bold;
-font-size:18px;
-transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-5px);
+.card h3{
+margin-top:0;
 }
 
-.llamar{
-display:inline-block;
-background:#e60000;
-color:white;
-padding:18px 40px;
-font-size:24px;
+.map{
+margin-top:20px;
 border-radius:10px;
-text-decoration:none;
-margin-top:30px;
-font-weight:bold;
-}
-
-.llamar:hover{
-background:#cc0000;
-}
-
-.zonas{
-background:white;
-margin-top:40px;
-padding:30px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-font-size:18px;
-}
-
-.mapa{
-margin-top:40px;
-}
-
-iframe{
-width:100%;
-height:350px;
-border:0;
-border-radius:10px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-font-size:18px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-.llamada-flotante{
-position:fixed;
-bottom:90px;
-right:20px;
-background:#e60000;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-font-size:18px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+overflow:hidden;
 }
 
 footer{
-margin-top:40px;
-background:#1f1f1f;
+background:#2f2f2f;
 color:white;
 text-align:center;
-padding:25px;
-}
-
-@media(max-width:600px){
-
-.hero{
-height:300px;
-}
-
-.hero h1{
-font-size:24px;
-}
-
-.llamar{
-font-size:20px;
-padding:15px 25px;
-}
-
+padding:20px;
+margin-top:40px;
 }
 
 </style>
@@ -178,76 +129,88 @@ padding:15px 25px;
 🚚 GRÚAS NOROCCIDENTE 24/7
 </header>
 
+
 <section class="hero">
-<h1>Servicio de Grúas 24/7<br>Noroccidente de Pichincha</h1>
+
+<div class="hero-box">
+
+<h1>Servicio de Grúas 24 Horas</h1>
+
+<p>
+Asistencia y traslado de vehículos.<br>
+Llegamos hasta donde te encuentres.
+</p>
+
+<div class="botones">
+
+<a class="boton whatsapp" href="https://wa.me/593XXXXXXXXX">
+WhatsApp
+</a>
+
+<a class="boton llamar" href="tel:+593XXXXXXXXX">
+Llamar Ahora
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<div class="container">
 
-<h2>Nuestros Servicios</h2>
+<section>
+
+<h2 class="titulo">Nuestros Servicios</h2>
 
 <div class="servicios">
 
 <div class="card">
-🚗 Traslado de autos
+<h3>Traslado de Autos</h3>
+<p>Movilización segura de vehículos livianos.</p>
 </div>
 
 <div class="card">
-🚛 Traslado de camiones
+<h3>Traslado de Camiones</h3>
+<p>Servicio especializado para vehículos pesados.</p>
 </div>
 
 <div class="card">
-🛠 Asistencia en carretera
+<h3>Asistencia en Carretera</h3>
+<p>Atención rápida en emergencias.</p>
 </div>
 
 <div class="card">
-⚡ Servicio 24 horas
+<h3>Servicio 24/7</h3>
+<p>Disponibles las 24 horas del día.</p>
 </div>
 
 </div>
 
-<div style="text-align:center;">
+</section>
 
-<a class="llamar" href="tel:+593998000641">
-📞 LLAMAR GRÚA 24/7
-</a>
 
-</div>
+<section>
 
-<div class="zonas">
+<h2 class="titulo">Ubicación Referencial</h2>
 
-<h2>Zonas donde trabajamos</h2>
+<div class="map">
 
-<p>
-San Miguel de los Bancos, Mindo, Nanegalito,
-Pedro Vicente Maldonado, Puerto Quito
-y todo el Noroccidente de Pichincha.
-</p>
+<iframe
+src="https://maps.google.com/maps?q=San%20Miguel%20de%20los%20Bancos&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="350"
+style="border:0;">
+</iframe>
 
 </div>
 
-<div class="mapa">
+</section>
 
-<h2>Ubicación de referencia</h2>
-
-<iframe src="https://www.google.com/maps?q=San+Miguel+de+los+Bancos+Ecuador&output=embed"></iframe>
-
-</div>
-
-</div>
-
-<a class="llamada-flotante" href="tel:+593998000641">
-📞 Llamar
-</a>
-
-<a class="whatsapp" href="https://wa.me/593998000641" target="_blank">
-💬 WhatsApp
-</a>
 
 <footer>
 
-<p>Grúas Noroccidente 24/7</p>
-<p>Servicio en todo el Noroccidente de Pichincha</p>
+<p>Servicio de grúas y traslado de vehículos</p>
+<p>Atención inmediata en carretera</p>
 
 </footer>
 
