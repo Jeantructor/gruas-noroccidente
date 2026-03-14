@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Grúas Noroccidente | Grúas 24 Horas San Miguel de los Bancos</title>
+<title>Grúas Noroccidente 24/7 | San Miguel de los Bancos</title>
 
-<meta name="description" content="Servicio de grúas 24 horas en San Miguel de los Bancos, Pedro Vicente Maldonado y Noroccidente de Pichincha. Atención rápida y segura.">
+<meta name="description" content="Servicio de grúas 24 horas en San Miguel de los Bancos. Remolque de autos, asistencia en carretera y traslado de vehículos. Atención inmediata.">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f4f4f4;
+font-family:Arial;
+background:#f5f5f5;
 color:#333;
 }
 
 header{
-background:#111;
-color:white;
+background:#ffcc00;
 padding:15px;
 text-align:center;
 font-size:22px;
@@ -28,10 +28,8 @@ font-weight:bold;
 }
 
 .hero{
-background:url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
-height:90vh;
+background:url("https://images.unsplash.com/photo-1605152276897-4f618f831968?q=80&w=2070") center/cover no-repeat;
+height:420px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -39,89 +37,80 @@ text-align:center;
 color:white;
 }
 
-.hero-box{
-background:rgba(0,0,0,0.65);
-padding:50px;
-border-radius:10px;
-max-width:700px;
-}
-
 .hero h1{
-font-size:50px;
-margin-bottom:10px;
+background:rgba(0,0,0,0.6);
+padding:20px;
+border-radius:10px;
+font-size:34px;
 }
 
-.hero p{
-font-size:22px;
-margin-bottom:30px;
+.container{
+max-width:1100px;
+margin:auto;
+padding:30px;
 }
 
-.btn-call{
-background:#ff3c00;
-color:white;
-padding:18px 35px;
-font-size:20px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.btn-call:hover{
-background:#ff1f00;
-}
-
-.section{
-padding:60px 20px;
-text-align:center;
-background:white;
-}
-
-.section-gray{
-background:#f0f0f0;
-}
-
-.section h2{
-font-size:32px;
-margin-bottom:20px;
-}
-
-.services{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
+.servicios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 margin-top:30px;
 }
 
-.service{
+.card{
 background:white;
 padding:25px;
 border-radius:10px;
-width:250px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+text-align:center;
+font-weight:bold;
+font-size:18px;
+transition:0.3s;
 }
 
-.reviews{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
+.card:hover{
+transform:scale(1.05);
+}
+
+.llamar{
+display:inline-block;
+background:#ff0000;
+color:white;
+padding:18px 40px;
+font-size:24px;
+border-radius:10px;
+text-decoration:none;
 margin-top:30px;
+font-weight:bold;
 }
 
-.review{
+.llamar:hover{
+background:#cc0000;
+}
+
+.trust{
 background:white;
-padding:20px;
+margin-top:40px;
+padding:30px;
 border-radius:10px;
-width:260px;
+text-align:center;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-.map{
-max-width:900px;
-margin:auto;
+.trust p{
+font-size:18px;
+margin:10px 0;
+}
+
+.mapa{
+margin-top:40px;
+}
+
+iframe{
+width:100%;
+height:350px;
+border:0;
 border-radius:10px;
-overflow:hidden;
 }
 
 .whatsapp{
@@ -130,150 +119,123 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:15px 22px;
 border-radius:50px;
 font-size:18px;
 text-decoration:none;
+font-weight:bold;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 footer{
-background:#111;
+margin-top:40px;
+background:#222;
 color:white;
 text-align:center;
-padding:20px;
-margin-top:40px;
+padding:25px;
+}
+
+@media(max-width:600px){
+
+.hero{
+height:300px;
+}
+
+.hero h1{
+font-size:24px;
+}
+
+.llamar{
+font-size:20px;
+padding:15px 25px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-GRÚAS NOROCCIDENTE 🚛
+🚚 GRÚAS NOROCCIDENTE 24/7
 </header>
 
 <section class="hero">
+<h1>Servicio de Grúas 24/7<br>San Miguel de los Bancos</h1>
+</section>
 
-<div class="hero-box">
+<div class="container">
 
-<h1>GRÚAS 24/7</h1>
+<h2 style="text-align:center;">Nuestros Servicios</h2>
 
-<p>
-Servicio de grúas en San Miguel de los Bancos  
-Pedro Vicente Maldonado y Noroccidente de Pichincha
-</p>
+<div class="servicios">
 
-<a class="btn-call" href="tel:+593998000641">
-📞 LLAMAR GRÚA AHORA
+<div class="card">
+🚗 Remolque de vehículos
+</div>
+
+<div class="card">
+🛠 Asistencia en carretera
+</div>
+
+<div class="card">
+🚛 Traslado de autos
+</div>
+
+<div class="card">
+⚡ Servicio 24 horas
+</div>
+
+</div>
+
+<div style="text-align:center;">
+
+<a class="llamar" href="tel:+593XXXXXXXXX">
+📞 LLAMAR GRÚA 24/7
 </a>
 
 </div>
 
-</section>
+<div class="trust">
 
+<h2>Por qué elegirnos</h2>
 
-<section class="section">
-
-<h2>Nuestros Servicios</h2>
-
-<div class="services">
-
-<div class="service">
-<h3>🚗 Traslado de Vehículos</h3>
-<p>Movemos tu vehículo de forma segura a cualquier destino.</p>
-</div>
-
-<div class="service">
-<h3>🚨 Emergencias 24/7</h3>
-<p>Disponible las 24 horas del día todos los días.</p>
-</div>
-
-<div class="service">
-<h3>🛣 Asistencia en Carretera</h3>
-<p>Te ayudamos en caso de accidentes o fallas mecánicas.</p>
-</div>
-
-<div class="service">
-<h3>🏍 Traslado de Motos</h3>
-<p>Servicio seguro para transporte de motocicletas.</p>
-</div>
+<p>✔ Atención inmediata 24 horas</p>
+<p>✔ Servicio rápido en toda la zona</p>
+<p>✔ Conductores profesionales</p>
+<p>✔ Precios justos</p>
 
 </div>
 
-</section>
+<div class="mapa">
 
-
-<section class="section section-gray">
-
-<h2>Opiniones de Clientes</h2>
-
-<div class="reviews">
-
-<div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-<p>Servicio muy rápido. Llegaron en menos de 20 minutos.</p>
-<b>- Carlos M.</b>
-</div>
-
-<div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-<p>Muy responsables y buen precio.</p>
-<b>- Andrea P.</b>
-</div>
-
-<div class="review">
-⭐ ⭐ ⭐ ⭐ ⭐  
-<p>Me ayudaron en la carretera de madrugada. Excelente servicio.</p>
-<b>- Luis R.</b>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>Ubicación</h2>
-
-<p>San Miguel de los Bancos - Ecuador</p>
-
-<div class="map">
+<h2 style="text-align:center;">Ubicación</h2>
 
 <iframe
-src="https://www.google.com/maps?q=San+Miguel+de+los+Bancos+Ecuador&output=embed"
-width="100%"
-height="400"
-style="border:0"
-allowfullscreen=""
-loading="lazy">
+src="https://www.google.com/maps?q=San+Miguel+de+los+Bancos+Ecuador&output=embed">
 </iframe>
 
 </div>
 
-<br>
+</div>
 
-<a class="btn-call" href="tel:+593998000641">
-📞 LLAMAR GRÚA
+<a class="whatsapp"
+href="https://wa.me/593XXXXXXXXX"
+target="_blank">
+
+💬 WhatsApp
+
 </a>
-
-</section>
-
 
 <footer>
 
-<p>Grúas Noroccidente | Servicio 24/7</p>
-
-<p>WhatsApp: +593998000641</p>
+<p>Grúas Noroccidente 24/7</p>
+<p>San Miguel de los Bancos - Ecuador</p>
+<p>Servicio de grúas las 24 horas</p>
 
 </footer>
-
-
-<a class="whatsapp" href="https://wa.me/593998000641">
-💬 WhatsApp
-</a>
 
 </body>
 </html>
