@@ -8,71 +8,99 @@
 
 body{
 margin:0;
-font-family:Arial;
-background:#f4f4f4;
+font-family:Arial, sans-serif;
+background:#f5f5f5;
 }
 
 /* PORTADA */
 
 .hero{
-background-image:url("https://images.unsplash.com/photo-1605559424843-9e4c228a7d0b");
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1605559424843-9e4c228a7d0b");
 background-size:cover;
 background-position:center;
 color:white;
 text-align:center;
-padding:120px 20px;
+padding:140px 20px;
 }
 
 .hero h1{
 font-size:50px;
 margin:0;
+color:#FFD700;
 }
 
 .hero p{
 font-size:22px;
+margin-top:10px;
 }
 
 .boton{
 display:inline-block;
-margin-top:25px;
+margin-top:30px;
 padding:18px 35px;
-background:red;
+background:#ff0000;
 color:white;
 text-decoration:none;
 font-size:22px;
 border-radius:8px;
+font-weight:bold;
 }
 
 /* SERVICIOS */
 
 .servicios{
-padding:40px;
+padding:50px 20px;
 text-align:center;
+}
+
+.servicios h2{
+color:#d60000;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
+max-width:900px;
+margin:auto;
 }
 
 .card{
 background:white;
-padding:20px;
+padding:25px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+font-size:18px;
 }
 
-/* SECCION OSCURA */
+/* CONFIANZA */
 
-.oscuro{
-background:#222;
-color:white;
+.confianza{
+background:#FFD700;
+padding:40px;
+text-align:center;
+font-size:18px;
+}
+
+/* MAPA */
+
+.mapa{
 padding:40px;
 text-align:center;
 }
 
-/* WHATSAPP */
+/* CONTACTO */
+
+.contacto{
+background:#111;
+color:white;
+text-align:center;
+padding:40px;
+font-size:18px;
+}
+
+/* BOTON WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -80,11 +108,26 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:16px 22px;
 border-radius:50px;
 font-size:18px;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+box-shadow:0 5px 12px rgba(0,0,0,0.4);
+}
+
+/* BOTON LLAMAR FLOTANTE */
+
+.llamar{
+position:fixed;
+bottom:80px;
+right:20px;
+background:#ff0000;
+color:white;
+padding:16px 22px;
+border-radius:50px;
+font-size:18px;
+text-decoration:none;
+box-shadow:0 5px 12px rgba(0,0,0,0.4);
 }
 
 </style>
@@ -102,7 +145,7 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 <p>Noroccidente de Pichincha</p>
 
 <a class="boton" href="tel:+593XXXXXXXXX">
-📞 LLAMAR GRÚA
+📞 LLAMAR GRÚA AHORA
 </a>
 
 </section>
@@ -137,13 +180,13 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 
 <!-- CONFIANZA -->
 
-<section class="servicios">
+<section class="confianza">
 
 <h2>⭐ ¿Por qué elegirnos?</h2>
 
 <p>🚛 Servicio rápido y seguro</p>
-<p>📍 Cobertura Noroccidente de Pichincha</p>
-<p>🕒 Atención 24 horas</p>
+<p>📍 Cobertura en todo el Noroccidente de Pichincha</p>
+<p>🕒 Atención las 24 horas</p>
 <p>🔧 Auxilio mecánico inmediato</p>
 
 </section>
@@ -167,7 +210,7 @@ Nono
 
 <!-- MAPA -->
 
-<section class="servicios">
+<section class="mapa">
 
 <h2>🗺️ Nuestra ubicación</h2>
 
@@ -182,10 +225,27 @@ style="border:0;">
 
 <!-- CONTACTO -->
 
-<section class="oscuro">
+<section class="contacto">
 
 <h2>📞 Contacto</h2>
 
+<p>Teléfono: 099XXXXXXX</p>
+
+<p>Servicio de grúa 24 horas</p>
+
+<p>Noroccidente de Pichincha</p>
+
+</section>
+
+<!-- BOTONES FLOTANTES -->
+
+<a class="llamar" href="tel:+593XXXXXXXXX">
+📞 Llamar
+</a>
+
+<a class="whatsapp" href="https://wa.me/593XXXXXXXXX">
+💬 WhatsApp
+</a>
 
 </body>
 </html>
