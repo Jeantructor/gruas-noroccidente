@@ -8,170 +8,196 @@
     <!-- Fuente profesional -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome para iconos -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
     <style>
-        /* Estilo general */
+        /* Scroll suave */
         html {
-            scroll-behavior: smooth; /* scroll suave */
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background: #f5f5f5;
+            scroll-behavior: smooth;
         }
 
-        /* Header con imagen y overlay */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Particles container */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top:0;
+            left:0;
+        }
+
+        /* Header con parallax y overlay */
         header {
             position: relative;
-            background: url('https://images.unsplash.com/photo-1594642583244-8db5f5db0f37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Z3J1YXMlMjBjYXJ8fDB8fHx8MTY5OTAwODAwMA&ixlib=rb-4.0.3&q=80&w=1400') no-repeat center center/cover;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1594642583244-8db5f5db0f37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1400&q=80') no-repeat center center / cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
-            padding: 100px 20px;
             text-align: center;
+            overflow: hidden;
         }
 
         header::after {
-            content: '';
-            position: absolute;
-            top:0; left:0; width:100%; height:100%;
-            background-color: rgba(0,0,0,0.5); /* overlay oscuro */
+            content:'';
+            position:absolute; top:0; left:0;
+            width:100%; height:100%;
+            background: rgba(0,0,0,0.6);
         }
 
         header h1 {
             position: relative;
-            font-size: 3em;
-            margin: 0;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            font-size: 4em;
+            margin:0;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+            z-index:1;
+            animation: fadeInDown 1.5s ease forwards;
         }
 
         nav {
             position: relative;
             display: flex;
-            justify-content: center;
             gap: 30px;
             margin-top: 20px;
-            z-index: 2;
+            z-index:1;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+            font-size:1.2em;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #FFD700;
+            color:#FFD700;
+        }
+
+        @keyframes fadeInDown {
+            0% {opacity:0; transform: translateY(-50px);}
+            100% {opacity:1; transform: translateY(0);}
         }
 
         section {
             padding: 80px 20px;
             max-width: 1200px;
             margin: auto;
-            opacity: 0;
+            text-align: center;
+            opacity:0;
             transform: translateY(50px);
-            animation: fadeInUp 1s forwards;
+            transition: all 1s ease;
         }
 
-        section:nth-of-type(1){animation-delay:0.2s;}
-        section:nth-of-type(2){animation-delay:0.4s;}
-        section:nth-of-type(3){animation-delay:0.6s;}
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        section.visible {
+            opacity:1;
+            transform: translateY(0);
         }
 
         section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #007BFF;
-            text-align: center;
+            font-size:2.5em;
+            margin-bottom:20px;
+            color:#007BFF;
         }
 
         section p {
-            font-size: 1.2em;
-            text-align: center;
+            font-size:1.2em;
         }
 
-        /* Botón profesional */
+        /* Botón llamar animado */
         .button-llamar {
             background-color: #FF4C4C;
-            color: white;
-            padding: 15px 50px;
-            border-radius: 12px;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
+            color:white;
+            padding:15px 50px;
+            border-radius:12px;
+            border:none;
+            font-size:20px;
+            cursor:pointer;
             transition: all 0.3s;
-            margin-top: 20px;
+            margin-top:20px;
+            animation: pulse 2s infinite;
         }
 
         .button-llamar:hover {
-            background-color: #C43E3E;
+            background-color:#C43E3E;
             transform: scale(1.1);
         }
 
-        /* Estilo servicios con hover */
+        @keyframes pulse {
+            0% { transform: scale(1);}
+            50% { transform: scale(1.05);}
+            100% { transform: scale(1);}
+        }
+
+        /* Grid de servicios */
         .servicios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+            margin-top:40px;
         }
 
         .servicio-card {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            overflow: hidden;
+            background:white;
+            border-radius:12px;
+            box-shadow:0 6px 20px rgba(0,0,0,0.1);
+            overflow:hidden;
             transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
         }
 
         .servicio-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
+            width:100%;
+            height:220px;
+            object-fit:cover;
         }
 
         .servicio-card p {
-            padding: 20px;
-            font-weight: 500;
+            padding:20px;
+            font-weight:500;
         }
 
         .servicio-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+            box-shadow:0 12px 30px rgba(0,0,0,0.2);
         }
 
-        /* Sección contacto */
+        /* Contacto */
         #contacto p {
-            font-size: 1.2em;
-            margin: 15px 0;
+            font-size:1.2em;
+            margin:15px 0;
         }
 
         #contacto i {
-            color: #007BFF;
-            margin-right: 10px;
+            color:#007BFF;
+            margin-right:10px;
         }
 
         footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:20px 0;
         }
 
     </style>
 </head>
 <body>
+
+    <!-- Particles background -->
+    <div id="particles-js"></div>
 
     <!-- Header -->
     <header>
@@ -225,6 +251,37 @@
     <footer>
         &copy; 2026 Grúas Noroccidente | Todos los derechos reservados
     </footer>
+
+    <!-- Script Particles.js -->
+    <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {"value": 50, "density": {"enable": true, "value_area": 800}},
+        "color": {"value": "#007BFF"},
+        "shape": {"type": "circle"},
+        "opacity": {"value": 0.3, "random": true},
+        "size": {"value": 3, "random": true},
+        "line_linked": {"enable": true, "distance": 150, "color": "#007BFF", "opacity":0.2, "width":1},
+        "move": {"enable": true, "speed": 2}
+      },
+      "interactivity": {
+        "events": {"onhover": {"enable": true, "mode": "grab"}},
+        "modes": {"grab": {"distance": 200, "line_linked": {"opacity": 0.5}}}
+      },
+      "retina_detect": true
+    });
+
+    // Fade-in on scroll
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+        sections.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            if(top < window.innerHeight - 100) {
+                section.classList.add('visible');
+            }
+        });
+    });
+    </script>
 
 </body>
 </html>
