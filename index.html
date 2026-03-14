@@ -1,291 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grúas Noroccidente</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fuente profesional -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<title>Grúas Noroccidente | Servicio 24/7</title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>
+    <style>
+        /* Estilo general */
+        html {
+            scroll-behavior: smooth; /* scroll suave */
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f5f5f5;
+        }
 
-body{
-margin:0;
-font-family:Arial;
-background:#f4f4f4;
-}
+        /* Header con imagen y overlay */
+        header {
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1594642583244-8db5f5db0f37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Z3J1YXMlMjBjYXJ8fDB8fHx8MTY5OTAwODAwMA&ixlib=rb-4.0.3&q=80&w=1400') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
 
-header{
-background:#c40000;
-color:white;
-text-align:center;
-padding:25px;
-}
+        header::after {
+            content: '';
+            position: absolute;
+            top:0; left:0; width:100%; height:100%;
+            background-color: rgba(0,0,0,0.5); /* overlay oscuro */
+        }
 
-nav{
-background:#222;
-text-align:center;
-padding:10px;
-}
+        header h1 {
+            position: relative;
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
 
-nav a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-weight:bold;
-}
+        nav {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            z-index: 2;
+        }
 
-.hero{
-text-align:center;
-background:white;
-padding:40px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
 
-.hero img{
-width:90%;
-max-width:700px;
-border-radius:10px;
-}
+        nav a:hover {
+            color: #FFD700;
+        }
 
-.boton{
-background:#25D366;
-color:white;
-padding:15px 25px;
-border-radius:8px;
-text-decoration:none;
-display:inline-block;
-margin:10px;
-font-size:18px;
-}
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards;
+        }
 
-.servicios{
-padding:40px;
-text-align:center;
-}
+        section:nth-of-type(1){animation-delay:0.2s;}
+        section:nth-of-type(2){animation-delay:0.4s;}
+        section:nth-of-type(3){animation-delay:0.6s;}
 
-.grid{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.card{
-background:white;
-padding:20px;
-width:220px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-}
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #007BFF;
+            text-align: center;
+        }
 
-.zona{
-background:white;
-padding:40px;
-text-align:center;
-}
+        section p {
+            font-size: 1.2em;
+            text-align: center;
+        }
 
-.contacto{
-background:#111;
-color:white;
-text-align:center;
-padding:40px;
-}
+        /* Botón profesional */
+        .button-llamar {
+            background-color: #FF4C4C;
+            color: white;
+            padding: 15px 50px;
+            border-radius: 12px;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
 
-footer{
-background:black;
-color:white;
-text-align:center;
-padding:10px;
-}
+        .button-llamar:hover {
+            background-color: #C43E3E;
+            transform: scale(1.1);
+        }
 
-/* BOTON FLOTANTE WHATSAPP */
+        /* Estilo servicios con hover */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:28px;
-padding:15px 18px;
-border-radius:50%;
-text-decoration:none;
-box-shadow:0 0 10px rgba(0,0,0,0.3);
-}
+        .servicio-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
 
-</style>
+        .servicio-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
 
+        .servicio-card p {
+            padding: 20px;
+            font-weight: 500;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Sección contacto */
+        #contacto p {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+
+        #contacto i {
+            color: #007BFF;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+    </style>
 </head>
-
 <body>
 
-<header>
-
-<h1>🚛 Grúas Noroccidente</h1>
-<p>Servicio de Grúa y Auxilio Mecánico 24/7</p>
-
-</header>
-
-<nav>
-
-<a href="#">Inicio</a>
-<a href="#">Servicios</a>
-<a href="#">Zona</a>
-<a href="#">Contacto</a>
-
-</nav>
-
-<section class="hero">
-
-<h2>Auxilio Mecánico Inmediato</h2>
-
-<p>Atención rápida en el Noroccidente de Pichincha</p>
-
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-
-<br><br>
-
-<a class="boton" href="https://wa.me/593998000641">
-📱 WhatsApp
-</a>
-  
-
-<a class="boton" href="tel:+593998000641">
-📞 Llamar ahora
-</a>
-
-</section>
-
-<section class="servicios">
-
-<h2>Nuestros Servicios</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>🚛 Servicio de Grúa</h3>
-<p>Traslado seguro de vehículos.</p>
-</div>
-
-<div class="card">
-<h3>🔧 Auxilio Mecánico</h3>
-<p>Reparaciones rápidas en carretera.</p>
-</div>
-
-<div class="card">
-<h3>🔋 Paso de Corriente</h3>
-<p>Arranque de batería descargada.</p>
-</div>
-
-<div class="card">
-<h3>🛞 Cambio de Llanta</h3>
-<p>Asistencia inmediata.</p>
-</div>
-
-<div class="card">
-<h3>⛽ Combustible</h3>
-<p>Entrega de gasolina en emergencias.</p>
-</div>
-
-</div>
-
-</section>
-  <section style="background:#f4f4f4;padding:40px;text-align:center;">
-
-<h2>⭐ ¿Por qué elegir Grúas Noroccidente?</h2>
-
-<div style="max-width:800px;margin:auto;font-size:18px;line-height:1.6;">
-
-<p>🚛 Servicio de grúa rápido y seguro.</p>
-
-<p>📍 Cobertura en todo el Noroccidente de Pichincha.</p>
-
-<p>🕒 Atención 24 horas los 7 días de la semana.</p>
-
-<p>🔧 Auxilio mecánico en carretera.</p>
-
-<p>📞 Atención inmediata por llamada o WhatsApp.</p>
-
-</div>
-
-</section>
-
-<section class="zona">
-
-<h2>Zona de Cobertura</h2>
-
-<p>
-
-Trabajamos en todo el <b>Noroccidente de Pichincha</b>
-
-</p>
-
-<p>
-
-San Miguel de los Bancos • Pedro Vicente Maldonado • Puerto Quito • vías cercanas
-
-</p>
-
-</section>
-
-<section class="contacto">
-
-<h2>Contacto 24/7</h2>
-
-<p>Llámanos o escríbenos por WhatsApp</p>
-
-<a class="boton" href="https://wa.me/593998000641">
-
-WhatsApp
-
-</a>
-
-<br><br>
-
-<a class="boton" href="tel:+593998000641">
-
-📞 Llamar ahora
-
-</a>
-
-</section>
-<section style="text-align:center;padding:40px;background:white;">
-
-<h2>📍 Nuestra zona de servicio</h2>
-
-<p>Atendemos todo el Noroccidente de Pichincha</p>
-
-<iframe
-src="https://www.google.com/maps?q=San+Miguel+de+los+Bancos&output=embed"
-width="90%"
-height="350"
-style="border:0;border-radius:10px;">
-</iframe>
-
-</section>
-<footer>
-
-© 2026 Grúas Noroccidente
-
-</footer>
-
-<!-- BOTON FLOTANTE -->
-
-<a href="https://wa.me/593998000641" class="whatsapp">
-💬
-</a>
-<section style="text-align:center;padding:40px;background:#111;color:white;">
-
-<h2>🚨 ¿Necesitas una grúa ahora?</h2>
-
-<p>Atención inmediata en el Noroccidente de Pichincha</p>
-
-<a href="tel:+593998000641" 
-style="display:inline-block;margin-top:20px;padding:20px 35px;background:#e63946;color:white;font-size:22px;font-weight:bold;text-decoration:none;border-radius:10px;">
-📞 LLAMAR GRÚA 24/7
-</a>
-
-</section>
+    <!-- Header -->
+    <header>
+        <h1>Grúas Noroccidente</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="inicio">
+        <h2>Bienvenido</h2>
+        <p>Servicio de grúas 24/7 en Noroccidente de Pichincha. Rapidez, seguridad y confianza para tu vehículo.</p>
+        <div style="text-align:center;">
+            <button class="button-llamar" onclick="window.location.href='tel:+593998000641'">
+                <i class="fa fa-phone"></i> LLAMAR GRÚA 24/7
+            </button>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <img src="https://images.unsplash.com/photo-1602579620682-f78aa5245f91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Traslado de vehículos">
+                <p>Traslado seguro de vehículos en ciudad y carretera.</p>
+            </div>
+            <div class="servicio-card">
+                <img src="https://images.unsplash.com/photo-1581091012184-d3d50f4e2a21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Asistencia en carretera">
+                <p>Asistencia inmediata ante fallas mecánicas y accidentes.</p>
+            </div>
+            <div class="servicio-card">
+                <img src="https://images.unsplash.com/photo-1600210496514-6a44c08da1db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Grúa 24/7">
+                <p>Servicio 24/7 con disponibilidad inmediata, sin importar la hora.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p><i class="fa fa-phone"></i> Teléfono: 0998000641</p>
+        <p><i class="fa fa-envelope"></i> Email: contacto@noro-gruas.com</p>
+        <p><i class="fa fa-map-marker-alt"></i> Ubicación: Noroccidente de Pichincha, Ecuador</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Grúas Noroccidente | Todos los derechos reservados
+    </footer>
 
 </body>
 </html>
