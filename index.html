@@ -18,7 +18,7 @@ color:#333;
 }
 
 header{
-background:#2f2f2f;
+background:#1f1f1f;
 color:white;
 padding:15px;
 text-align:center;
@@ -44,13 +44,13 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,0.55);
 }
 
 .hero-box{
 position:relative;
 z-index:2;
-background:rgba(0,0,0,0.55);
+background:rgba(0,0,0,0.6);
 padding:35px;
 border-radius:10px;
 max-width:600px;
@@ -77,6 +77,7 @@ margin:8px;
 border-radius:6px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
 .whatsapp{
@@ -84,9 +85,17 @@ background:#25D366;
 color:white;
 }
 
+.whatsapp:hover{
+background:#1ebe5d;
+}
+
 .llamar{
-background:#444;
+background:#e60000;
 color:white;
+}
+
+.llamar:hover{
+background:#cc0000;
 }
 
 section{
@@ -110,12 +119,13 @@ gap:20px;
 background:white;
 padding:20px;
 border-radius:8px;
-box-shadow:0 2px 6px rgba(0,0,0,0.15);
+box-shadow:0 2px 8px rgba(0,0,0,0.15);
 text-align:center;
+transition:0.3s;
 }
 
-.card h3{
-margin-top:0;
+.card:hover{
+transform:translateY(-5px);
 }
 
 .confianza{
@@ -130,7 +140,7 @@ background:white;
 padding:20px;
 border-radius:8px;
 text-align:center;
-box-shadow:0 2px 6px rgba(0,0,0,0.15);
+box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
 
 .map{
@@ -140,11 +150,39 @@ overflow:hidden;
 }
 
 footer{
-background:#2f2f2f;
+background:#1f1f1f;
 color:white;
 text-align:center;
 padding:20px;
 margin-top:40px;
+}
+
+/* BOTONES FLOTANTES */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.call-float{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#e60000;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 @media(max-width:600px){
@@ -183,11 +221,11 @@ Llegamos hasta donde te encuentres.
 
 <div class="botones">
 
-<a class="boton whatsapp" href="https://wa.me/593XXXXXXXXX">
+<a class="boton whatsapp" href="https://wa.me/593979837134">
 WhatsApp
 </a>
 
-<a class="boton llamar" href="tel:+593XXXXXXXXX">
+<a class="boton llamar" href="tel:+593979837134">
 Llamar Ahora
 </a>
 
@@ -280,6 +318,15 @@ style="border:0;">
 <p>Atención inmediata en carretera</p>
 
 </footer>
+
+
+<a class="call-float" href="tel:+593979837134">
+📞
+</a>
+
+<a class="whatsapp-float" href="https://wa.me/593979837134">
+💬
+</a>
 
 </body>
 </html>
