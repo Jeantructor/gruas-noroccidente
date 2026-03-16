@@ -34,14 +34,27 @@ align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
+position:relative;
 }
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
 }
 
 .hero-box{
+position:relative;
+z-index:2;
 background:rgba(0,0,0,0.55);
 padding:35px;
 border-radius:10px;
 max-width:600px;
+}
 }
 
 .hero h1{
