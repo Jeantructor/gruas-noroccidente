@@ -8,7 +8,7 @@
 <style>
 
 body{
-font-family: Arial;
+font-family:Arial;
 margin:0;
 background:#f4f4f4;
 }
@@ -24,9 +24,9 @@ font-weight:bold;
 
 .hero{
 background:
-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
 url("grua1.jpg") center/cover no-repeat;
-height:380px;
+height:420px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -35,7 +35,50 @@ color:white;
 }
 
 .hero h1{
-font-size:40px;
+font-size:38px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+margin:10px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.llamar{
+background:#e63946;
+color:white;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.emergencia{
+display:inline-block;
+margin-top:20px;
+background:#ff0000;
+color:white;
+padding:18px 35px;
+font-size:20px;
+font-weight:bold;
+border-radius:8px;
+text-decoration:none;
+animation:parpadeo 1.5s infinite;
+}
+
+@keyframes parpadeo{
+0%{opacity:1;}
+50%{opacity:0.7;}
+100%{opacity:1;}
 }
 
 section{
@@ -56,30 +99,6 @@ background:white;
 padding:20px;
 border-radius:10px;
 box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-.contacto{
-background:#111;
-color:white;
-}
-
-.btn{
-display:inline-block;
-padding:15px 25px;
-margin:10px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.whatsapp{
-background:#25D366;
-color:white;
-}
-
-.llamar{
-background:#e63946;
-color:white;
 }
 
 footer{
@@ -123,18 +142,29 @@ text-decoration:none;
 </header>
 
 <div class="hero">
+
 <div>
-<h1>GRÚAS 24 HORAS 🚚<br>Asistencia Rápida en Carretera</h1>
+
+<h1>GRÚAS 24 HORAS 🚚</h1>
+
+<p>Asistencia rápida en carretera<br>Llegamos hasta donde te encuentres</p>
+
+<a class="emergencia" href="tel:0979837134">
+🚨 EMERGENCIA 24H - LLAMAR AHORA
+</a>
+
+<br>
 
 <a class="btn llamar" href="tel:0979837134">
-📞 LLAMAR AHORA
+📞 Llamar
 </a>
 
 <a class="btn whatsapp" href="https://wa.me/593979837134">
-💬 WHATSAPP
+💬 WhatsApp
 </a>
 
 </div>
+
 </div>
 
 <section>
@@ -178,24 +208,9 @@ Auxilio Mecánico
 <p style="max-width:800px;margin:auto;line-height:1.6;">
 
 Ofrecemos servicio de grúas 24 horas, asistencia en carretera y traslado seguro de vehículos.
-Atendemos emergencias vehiculares en cualquier momento del día o la noche.
-Nuestro equipo está listo para ayudarte rápidamente cuando más lo necesitas.
+Atendemos emergencias vehiculares y llegamos hasta donde te encuentres para ayudarte rápidamente.
 
 </p>
-
-</section>
-
-<section class="contacto">
-
-<h2>Contáctanos</h2>
-
-<a class="btn whatsapp" href="https://wa.me/593979837134">
-WhatsApp
-</a>
-
-<a class="btn llamar" href="tel:0979837134">
-Llamar ahora
-</a>
 
 </section>
 
@@ -204,7 +219,7 @@ Llamar ahora
 <h2>Ubicación</h2>
 
 <iframe
-src="https://www.google.com/maps?q=quito&output=embed"
+src="https://www.google.com/maps?q=San%20Miguel%20de%20los%20Bancos&output=embed"
 width="100%"
 height="300"
 style="border:0;">
@@ -217,9 +232,7 @@ style="border:0;">
 </footer>
 
 <a class="float" href="https://wa.me/593979837134">💬</a>
-<a class="call" href="tel:0991234567">📞</a>
+<a class="call" href="tel:0979837134">📞</a>
 
-</body>
-</html>
 </body>
 </html>
