@@ -10,12 +10,13 @@
 body{
 font-family: Arial;
 margin:0;
-background:#111;
-color:white;
+background:#f5f7fa; /* fondo claro elegante */
+color:#222;
 }
 
 header{
-background:#000;
+background:#111;
+color:white;
 text-align:center;
 padding:20px;
 font-size:22px;
@@ -24,13 +25,14 @@ font-weight:bold;
 
 .hero{
 background:
-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
 url("grua1.jpg") center/cover no-repeat;
 height:400px;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+color:white;
 }
 
 .hero h1{
@@ -67,7 +69,7 @@ color:white;
 transform:scale(1.05);
 }
 
-/* SERVICIOS NUEVOS */
+/* SERVICIOS */
 .grid-servicios{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -77,15 +79,16 @@ margin:auto;
 }
 
 .card{
-background:#1c1c1c;
+background:white; /* 🔥 ahora blanco */
 border-radius:15px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.5);
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
 .card img{
@@ -96,21 +99,24 @@ object-fit:cover;
 
 .card h3{
 margin:15px 10px 5px;
+color:#111;
 }
 
 .card p{
-color:#f5b400;
+color:#e60023; /* rojo más profesional */
 margin-bottom:15px;
 }
 
 /* CONTACTO */
 .contacto{
-background:#000;
+background:#111;
+color:white;
 }
 
 /* FOOTER */
 footer{
 background:#000;
+color:white;
 text-align:center;
 padding:15px;
 }
