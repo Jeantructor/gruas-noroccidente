@@ -6,70 +6,51 @@
 <title>Grúas Noroccidente 24/7</title>
 
 <style>
-  
+
 body{
 font-family: Arial;
 margin:0;
-background:#f4f4f4;
+background:#111;
+color:white;
 }
 
 header{
-background:#111;
-color:white;
+background:#000;
 text-align:center;
 padding:20px;
-font-size:24px;
+font-size:22px;
 font-weight:bold;
 }
 
 .hero{
 background:
-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
 url("grua1.jpg") center/cover no-repeat;
-height:380px;
+height:400px;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-color:white;
 }
 
 .hero h1{
-font-size:40px;
+font-size:38px;
 }
 
 section{
-padding:40px 20px;
+padding:50px 20px;
 text-align:center;
 }
 
-.servicios{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-max-width:900px;
-margin:auto;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-.contacto{
-background:#111;
-color:white;
-}
-
+/* BOTONES */
 .btn{
 display:inline-block;
 padding:15px 25px;
 margin:10px;
-border-radius:6px;
+border-radius:8px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
 .whatsapp{
@@ -78,17 +59,63 @@ color:white;
 }
 
 .llamar{
-background:#e63946;
+background:#e60023;
 color:white;
 }
 
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SERVICIOS NUEVOS */
+.grid-servicios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:#1c1c1c;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card h3{
+margin:15px 10px 5px;
+}
+
+.card p{
+color:#f5b400;
+margin-bottom:15px;
+}
+
+/* CONTACTO */
+.contacto{
+background:#000;
+}
+
+/* FOOTER */
 footer{
 background:#000;
-color:white;
 text-align:center;
 padding:15px;
 }
 
+/* BOTONES FLOTANTES */
 .float{
 position:fixed;
 bottom:20px;
@@ -105,7 +132,7 @@ text-decoration:none;
 position:fixed;
 bottom:20px;
 left:20px;
-background:#e63946;
+background:#e60023;
 color:white;
 padding:15px 18px;
 border-radius:50%;
@@ -124,15 +151,10 @@ text-decoration:none;
 
 <div class="hero">
 <div>
-<h1>GRÚAS 24 HORAS 🚚<br>Asistencia Rápida en Carretera</h1>
+<h1>Servicio de Grúas 24 Horas 🚚<br>Llegamos hasta donde te encuentres</h1>
 
-<a class="btn llamar" href="tel:0979837134">
-📞 LLAMAR AHORA
-</a>
-
-<a class="btn whatsapp" href="https://wa.me/593979837134">
-💬 WHATSAPP
-</a>
+<a class="btn llamar" href="tel:0979837134">📞 LLAMAR AHORA</a>
+<a class="btn whatsapp" href="https://wa.me/593979837134">💬 WHATSAPP</a>
 
 </div>
 </div>
@@ -141,30 +163,41 @@ text-decoration:none;
 
 <h2>Nuestros Servicios</h2>
 
-<div class="servicios">
+<div class="grid-servicios">
 
 <div class="card">
-🚗 <br>
-Traslado de Autos
-<p>Movilización segura de vehículos livianos.</p>
+<img src="grua1.jpg">
+<h3>Traslado de Vehículos</h3>
+<p>Siniestrados – Averiados</p>
 </div>
 
 <div class="card">
-🚛 <br>
-Traslado de Camiones
-<p>Servicio especializado para vehículos pesados.</p>
+<img src="https://images.unsplash.com/photo-1581091012184-7c4b8f0f1d9f">
+<h3>Servicio de Montacargas</h3>
 </div>
 
 <div class="card">
-🔋 <br>
-Paso de Corriente
-<p>Arranque de batería en carretera.</p>
+<img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9">
+<h3>Apertura de Puertas</h3>
+<p>de Vehículos</p>
 </div>
 
 <div class="card">
-🛠️ <br>
-Auxilio Mecánico
-<p>Asistencia rápida cuando tu vehículo falla.</p>
+<img src="https://images.unsplash.com/photo-1593941707882-a56bbc8a3a06">
+<h3>Abastecimiento de</h3>
+<p>Combustible</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603575448366-153f093fd0e2">
+<h3>Desbloqueo de</h3>
+<p>Alarmas</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e">
+<h3>Carga de</h3>
+<p>Baterías</p>
 </div>
 
 </div>
@@ -176,11 +209,8 @@ Auxilio Mecánico
 <h2>Servicio de Grúas 24 Horas</h2>
 
 <p style="max-width:800px;margin:auto;line-height:1.6;">
-
-Ofrecemos servicio de grúas 24 horas, asistencia en carretera y traslado seguro de vehículos.
-Atendemos emergencias vehiculares en cualquier momento del día o la noche.
-Nuestro equipo está listo para ayudarte rápidamente cuando más lo necesitas.
-
+Ofrecemos asistencia en carretera, traslado seguro de vehículos y atención inmediata.
+Llegamos hasta donde te encuentres, las 24 horas del día.
 </p>
 
 </section>
@@ -189,13 +219,8 @@ Nuestro equipo está listo para ayudarte rápidamente cuando más lo necesitas.
 
 <h2>Contáctanos</h2>
 
-<a class="btn whatsapp" href="https://wa.me/593979837134">
-WhatsApp
-</a>
-
-<a class="btn llamar" href="tel:0979837134">
-Llamar ahora
-</a>
+<a class="btn whatsapp" href="https://wa.me/593979837134">WhatsApp</a>
+<a class="btn llamar" href="tel:0979837134">Llamar ahora</a>
 
 </section>
 
@@ -204,7 +229,7 @@ Llamar ahora
 <h2>Ubicación</h2>
 
 <iframe
-src="https://www.google.com/maps?q=quito&output=embed"
+src="https://www.google.com/maps?q=San+Miguel+de+los+Bancos&output=embed"
 width="100%"
 height="300"
 style="border:0;">
@@ -217,7 +242,7 @@ style="border:0;">
 </footer>
 
 <a class="float" href="https://wa.me/593979837134">💬</a>
-<a class="call" href="tel:09798371347">📞</a>
+<a class="call" href="tel:0979837134">📞</a>
 
 </body>
 </html>
